@@ -576,14 +576,14 @@ export default class TextField extends PureComponent {
   }
 
   renderInput() {
-    let { disabled, editable, tintColor, style: inputStyleOverrides } = this.props
+    let { disabled, editable, baseColor, style: inputStyleOverrides } = this.props
 
     let props = this.inputProps()
     let inputStyle = this.inputStyle()
 
     return (
       <TextInput
-        selectionColor={tintColor}
+        selectionColor={baseColor}
         {...props}
         style={[styles.input, inputStyle, inputStyleOverrides]}
         editable={!disabled && editable}
